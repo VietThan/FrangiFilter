@@ -3,9 +3,21 @@ function [Dxx, Dyy, Dxy] = Hessian2D(image, scale, neighborhood)
 % from function written by D.Kroon University of Twente (June 2009)
 % Based on "Multiscale vessel enhancement filtering" by A.F. Frangi, 1998
 
-% Like other image processing filters, the concept is to create a kernel
-% with which to apply convolution to the image with.
-% A.F.Frangi describes
+% Name: Hessian2D
+% Description: create a kernel with which to apply convolution to the image
+% based on A.F. Frangi works
+
+% Input: 
+%   image           - 2-dimension matrix representation of image
+%   scale           - scalar value for scale factor (don't go below 1)
+%   neighborhood    - scalar value for local information influence
+
+% Output:
+%   Dxx, Dyy, Dxy   - Hessian 2x2 matrix values
+%    Hessian matrix:
+%       | Dxx  Dxy |
+%       |          |
+%       | Dxy  Dyy |
 
 if nargin < 2 || neighborhood < 2; end
 
