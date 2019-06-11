@@ -20,7 +20,13 @@ function [Lambda1,Lambda2,Ix,Iy]=eig2image(Dxx,Dxy,Dyy)
 %   Ix          - vector corresponding to smaller eigenvalue
 %   Iy          - vector corresponding to larger eigenvalue
 
-% Compute the eigenvectors
+% COMPUTING EIGENVECTORS
+% value under square root
 tmpVal = ((Dxx - Dyy).^2 + 4*Dxy.^2).^(1/2);
-v1x = (1/2*(Dxx + Dyy - tmpVal) - Dyy)./Dxy;
-v2x = (1/2*(Dxx + Dyy + tmpVal) - Dyy)./Dxy;
+
+% eigenvector calculations
+v1x = 2 * Dxy .* (Dxx - Dyy + tmpVal);
+v1y = 1;
+v2x = 2 * Dxy .* (Dxx - Dyy - tmpVal);
+v2y = 1;
+
