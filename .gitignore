@@ -1,0 +1,9 @@
+# ignore .asv files
+*.asv
+
+# ignore data
+data/
+
+# ignore .nii
+*.nii
+*.nii.gz 
