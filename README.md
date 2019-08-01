@@ -20,3 +20,9 @@ Per Frangi, we're looking to the second-derivative expansion (the Hessian) as sh
 
 ### Hessian matrix and eigenvalues
 A Hessian matrix provides valuable information in the form of its eigenvalues.
+
+### Applying the filter
+<p align="center">
+	<img src="https://latex.codecogs.com/gif.latex?V_{o}(s)=\begin{cases}&space;0&space;&&space;\text{&space;if&space;}&space;\lambda_{2}>&space;0&space;\text{&space;or&space;}&space;\lambda_{3}>&space;0\\&space;\left&space;(&space;1-\text{&space;exp}\left&space;(&space;-\frac{R_{A}^{2}}{2\alpha^{2}}&space;\right&space;)&space;\right&space;)\left&space;(&space;\text{&space;exp}\left&space;(&space;-\frac{R_{B}^{2}}{2\beta^{2}}&space;\right&space;)&space;\right&space;)\left&space;(1-&space;\text{&space;exp}\left&space;(&space;-\frac{S^{2}}{2\gamma&space;^{2}}&space;\right&space;)&space;\right&space;)&&space;\text{&space;otherwise&space;}&space;\end{cases}" title="V_{o}(s)=\begin{cases} 0 & \text{ if } \lambda_{2}> 0 \text{ or } \lambda_{3}> 0\\ \left ( 1-\text{ exp}\left ( -\frac{R_{A}^{2}}{2\alpha^{2}} \right ) \right )\left ( \text{ exp}\left ( -\frac{R_{B}^{2}}{2\beta^{2}} \right ) \right )\left (1- \text{ exp}\left ( -\frac{S^{2}}{2\gamma ^{2}} \right ) \right )& \text{ otherwise } \end{cases}" 
+	alt="Hessian-based Frangi filter equation"/>
+</p>
